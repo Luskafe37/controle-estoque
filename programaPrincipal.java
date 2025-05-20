@@ -3,7 +3,7 @@ package controeEstoqueTeste;
 import java.util.List;
 import java.util.Scanner;
 import java.util.ArrayList;
-
+/*
     class Produto {
 
         String nomeProduto;
@@ -57,6 +57,8 @@ import java.util.ArrayList;
 
     }
 
+ */
+
 
 
 public class programaPrincipal {
@@ -103,7 +105,7 @@ public class programaPrincipal {
 
 
 
-                    
+
                     String addProduto = "";
 
                    do {
@@ -155,10 +157,10 @@ public class programaPrincipal {
 
 
                             System.out.println("DIGITE A QUANTIDADE A SER ADICIONADA AO ESTOQUE");
-                            
+
                             int qnt = sc.nextInt();
 
-                            
+
                             if(qnt != 0 ){
                                 try{
                                     //int novaQnt = Integer.parseInt(qnt);
@@ -193,6 +195,11 @@ public class programaPrincipal {
                             System.out.println(produtos.get(k));
                             sc.nextLine();
 
+                            if (produtos.get(k).getQnt() == 0) {
+                                System.out.println("ESTOQUE ZERADO");
+                                encontrado = true;
+                                break;
+                            }
 
                             System.out.println("DIGITE A QUANTIDADE A SER REMOVIDA DO ESTOQUE");
 
@@ -201,14 +208,18 @@ public class programaPrincipal {
 
                             if(qnt != 0 ){
                                 try{
-                                    if (produtos.get(k).getQnt() > qnt){
                                     int novaQnt = qnt;
+
+                                    if (produtos.get(k).getQnt() >= qnt){
                                     produtos.get(k).setQntSub(novaQnt);
                                     }
-                                    else if (produtos.get(k).getQnt() == 0) {
+                                    /* else if (produtos.get(k).getQnt() == 0) {
                                         System.out.println("ESTOQUE ZERADO");
+                                        encontrado = true;
                                         break;
-                                    } else {
+                                    }
+                                     */
+                                    else {
                                         System.out.println("VALOR ACIMA DO ESTOQUE DISPONÍVEL");
                                         encontrado = true;
                                         break;
