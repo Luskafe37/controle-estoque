@@ -11,6 +11,9 @@ Versão 1.1
   -  Adicionado case para remover produtos do estoque
   -  Adicionado case para editar nome e valor do produto
 
+Script de caixa criado, ainda preciso criar um pequeno banco de dados
+para vincular alguns produtos ao script de estoque e caixa.
+O script de caixa ainda está em desenvolvimento.
+
 -- Futuras Atualizações --
-  - Script de caixa de mercado vinculado
-  - ???
+  -  Banco de dados.
